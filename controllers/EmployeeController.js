@@ -2,7 +2,6 @@ import Employee from "../models/Employee";
 import { errorResponse, successResponse } from "../utility/helper";
 
 export const getEmployee = async (_, res) => {
-  console.log('hello')
   try {
     const employeeDetails = await Employee.find({});
     return successResponse(res, employeeDetails);
