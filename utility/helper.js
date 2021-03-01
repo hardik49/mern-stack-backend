@@ -2,7 +2,7 @@ export const successResponse = (res, data = {}, status = 200) =>
   res.json({
     status,
     data,
-    success: true
+    success: true,
   });
 
 export const errorResponse = (
@@ -16,5 +16,5 @@ export const errorResponse = (
     errorMessage,
     error,
     data: null,
-    success: false
+    success: false,
   });

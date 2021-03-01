@@ -6,7 +6,7 @@ import {
   getEmployeeById,
   updateEmployee,
   addEmployee,
-  removeEmployee
+  removeEmployee,
 } from "../controllers/EmployeeController";
 
 router.post("/signup", addUser);

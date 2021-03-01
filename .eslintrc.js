@@ -3,17 +3,17 @@ module.exports = {
   env: {
     es6: true,
     node: true,
-    browser: true
+    browser: true,
   },
   parserOptions: {
     ecmaVersion: 6,
     sourceType: "module",
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   extends: ["eslint:recommended", "plugin:prettier/recommended"],
   rules: {
-    "no-console": "error"
-  }
+    "no-console": "error",
+  },
 };

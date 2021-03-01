@@ -5,36 +5,36 @@ const userSchema = new Schema(
   {
     firstName: {
       type: String,
-      require: true
+      require: true,
     },
     lastName: {
       type: String,
-      require: true
+      require: true,
     },
     email: {
       type: String,
-      require: true
+      require: true,
     },
     password: {
       type: String,
-      require: true
+      require: true,
     },
     address: {
       type: String,
-      require: true
+      require: true,
     },
     city: {
       type: String,
-      require: true
+      require: true,
     },
     state: {
       type: String,
-      require: true
+      require: true,
     },
     zip: {
       type: String,
-      require: true
-    }
+      require: true,
+    },
   },
   { versionKey: false }
 );
