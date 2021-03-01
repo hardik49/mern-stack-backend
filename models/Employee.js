@@ -4,32 +4,32 @@ const employeeSchema = new mongoose.Schema(
   {
     employeeId: {
       type: String,
-      require: true
+      require: true,
     },
     fullName: {
       type: String,
-      require: true
+      require: true,
     },
     email: {
       type: String,
-      require: true
+      require: true,
     },
     dateOfBirth: {
       type: Date,
-      require: true
+      require: true,
     },
     technology: {
       type: String,
-      require: true
+      require: true,
     },
     experience: {
       type: String,
-      require: true
+      require: true,
     },
     otherSkills: {
       type: String,
-      require: true
-    }
+      require: true,
+    },
   },
   { versionKey: false }
 );

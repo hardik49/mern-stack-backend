@@ -20,7 +20,7 @@ app.use(cookieParser());
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
   })
   .then(() => {
     // eslint-disable-next-line

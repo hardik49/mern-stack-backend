@@ -29,7 +29,7 @@ export const authenticateUser = async (req, res) => {
 
     if (isUserExists) {
       const token = jwt.sign({ isUserExists }, process.env.SECRET_KEY, {
-        expiresIn: "600s"
+        expiresIn: "600s",
       });
       return successResponse(res, token);
     } else {
