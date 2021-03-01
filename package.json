@@ -15,7 +15,9 @@
     "@babel/core": "^7.12.10",
     "@babel/node": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
-    "eslint": "^7.20.0"
+    "eslint": "^7.20.0",
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "^10.5.4"
   },
   "dependencies": {
     "babel-eslint": "^10.1.0",
@@ -40,9 +42,10 @@
     }
   },
   "lint-staged": {
-    "**/*.js": [
+    "./**/*.{js,jsx,css,scss}": [
       "npm run lint",
       "git add"
-    ]
+    ],
+    "*.js": "eslint --cache --fix"
   }
 }
