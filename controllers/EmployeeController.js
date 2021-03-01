@@ -6,7 +6,7 @@ export const getEmployee = async (_, res) => {
     const employeeDetails = await Employee.find({});
     return successResponse(res, employeeDetails);
   } catch (err) {
-    return errorResponse(res, "Can not find employee!");
+    return errorResponse(res, "Can't find employee!");
   }
 };
 
