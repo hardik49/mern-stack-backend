@@ -17,22 +17,26 @@ app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+const mongoURI =
+  "mongodb+srv://hardik:hdkHardik97@mern.fxcye.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(() => {
     // eslint-disable-next-line
-    console.log('Database Connection Established...!') })
+    console.log('Database Connection Established...!')
+  })
   .catch(() => {
     // eslint-disable-next-line
-    console.log('Error: Database connection can not be established...!') });
-
+    console.log('Error: Database connection can not be established...!')
+  });
 app.use(
   "/",
   (req, res, next) => {
-    const notToAuthenticate = ["/login", "/signup"];
+    const notToAuthenticate = ["/login", "/signup", "/employee"];
     if (notToAuthenticate.indexOf(req.path) !== -1) return next();
     auth(req, res, next);
   },
