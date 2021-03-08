@@ -20,6 +20,7 @@
     "lint-staged": "^10.5.4"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^10.1.0",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
