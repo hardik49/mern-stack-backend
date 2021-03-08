@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 const mongoURI =
-  "mongodb+srv://hardik:hdkHardik97@mern.fxcye.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://hardik:hdkHardik97@mern.fxcye.mongodb.net/dbMern?retryWrites=true&w=majority";
 
 mongoose
   .connect(mongoURI, {
@@ -29,9 +29,9 @@ mongoose
     // eslint-disable-next-line
     console.log('Database Connection Established...!')
   })
-  .catch(() => {
+  .catch((err) => {
     // eslint-disable-next-line
-    console.log('Error: Database connection can not be established...!')
+    console.log('Error: Database connection can not be established...!',err)
   });
 app.use(
   "/",
